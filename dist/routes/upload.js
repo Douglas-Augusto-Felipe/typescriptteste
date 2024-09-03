@@ -60,7 +60,7 @@ function hasDuplicateReading(readingType, month) {
 function callGeminiAPI(imageData) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield axios_1.default.post('AIzaSyCcEg8chTpMW8m6b5d-vjKJjFPfEH0TfK4', { imageData });
+            const response = yield axios_1.default.post('https://api.gemini.com/v1/process_image', { imageData });
             return response.data.value;
         }
         catch (error) {

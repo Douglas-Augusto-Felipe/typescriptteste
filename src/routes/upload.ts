@@ -22,10 +22,10 @@ function hasDuplicateReading(readingType: string, month: number) {
     return false; // Exemplo: retorna false se não houver duplicata
 }
 
-// Simulando a chamada à API do Gemini 
+// Simulando a chamada à API do Gemini (substituir por sua lógica real)
 async function callGeminiAPI(imageData: string): Promise<number> {
     try {
-        const response = await axios.post('AIzaSyCcEg8chTpMW8m6b5d-vjKJjFPfEH0TfK4', { imageData });
+        const response = await axios.post('https://api.gemini.com/v1/process_image', { imageData });
         return response.data.value;
     } catch (error) {
         console.error('Error calling Gemini API:', error);
